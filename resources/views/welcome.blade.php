@@ -1,9 +1,13 @@
 @php
 $chartData = [
+    'centyl_97' => json_encode([82.3,93.8,102.8,112.8,120,128.5,134.6,140,146.5,153.5,159,167,175,181.9,185.1,188.5,190 ,191.2]),
+    'centyl_90' => json_encode([80.4,86.5, 92, 96.3, 100.2, 105.1,110, 117.5, 124.8, 130.5, 136.6, 142.7, 149.2, 155.2, 162.5, 170, 176.5, 181, 182, 182 ]),
     'centyl_75' => json_encode([79,90.5,98.5, 107.2, 114.1, 121, 127, 133, 139, 145, 150, 156.9, 165, 172, 176.5, 180.5, 182.2, 182.9 ]),
     'centyl_50' => json_encode([77,88,96.8, 104.2, 110.6, 117.4, 123.5, 129.5, 135.5, 140.9, 146.2, 152, 159, 166, 171.5, 176, 178.5, 178.9 ]),
     'centyl_25' => json_encode([75.1,86.5,94.2, 101.2, 108, 114.2, 120.4, 126, 131, 137, 142, 147, 153.2, 159.7, 167, 172, 174.5, 174.9 ]),
-            
+    'centyl_10' => json_encode([ ]),
+    'centyl_03' => json_encode([ ]),
+
 ];
 
 @endphp
@@ -55,6 +59,31 @@ $chartData = [
                 data: {
                     labels: labels,
                     datasets: [
+                        {
+                            label: '97',
+                            data: JSON.parse(chartData.centyl_97),
+                            borderColor: '#666666',
+                            borderWidth: 1,
+                            fill: false,
+                            cubicInterpolationMode: 'monotone',
+                            tension: 0.9,                            
+                            borderJoinStyle: 'round',
+                            capBezierPoints: false,
+                            pointStyle: false,
+                            borderDash: [2, 2],
+                        },
+                        {
+                            label: '90',
+                            data: JSON.parse(chartData.centyl_90),
+                            borderColor: '#666666',
+                            borderWidth: 1,
+                            fill: false,
+                            cubicInterpolationMode: 'monotone',
+                            tension: 0.9,                            
+                            borderJoinStyle: 'round',
+                            capBezierPoints: false,
+                            pointStyle: false,
+                        },
                         {
                             label: '75',
                             data: JSON.parse(chartData.centyl_75),
